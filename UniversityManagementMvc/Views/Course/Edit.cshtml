@@ -1,0 +1,18 @@
+﻿@model UniversityManagementMvc.Models.Course
+
+<form  method="post">
+
+    <label>Course Id</label>
+    <input class="form-control" name="courseId" value="@Model.courseId"  readonly/>
+
+    <label>Title</label>
+    <input class="form-control" name="Title" value="@Model.Title" />
+
+    <label>Credits</label>
+    <input class="form-control" name="Credits" value="@Model.Credits" />
+
+    <label>Department Id</label>
+    <input class="form-control" name="DepartmentId" value="@Model.DepartmentId" />
+
+    <button class="btn btn-success mt-3">Update</button>
+</form>

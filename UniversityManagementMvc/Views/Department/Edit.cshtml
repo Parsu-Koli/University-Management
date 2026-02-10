@@ -1,0 +1,24 @@
+﻿@model UniversityManagementMvc.Models.Department
+
+<h2>Update Department</h2>
+
+<form method="post">
+
+    
+    
+    <label>Department Name</label>
+    <input class="form-control" name="Name" value="@Model.Name" />
+
+    <label>Budget</label>
+    <input class="form-control" name="Budget" value="@Model.Budget" />
+
+    @* <label>Start Date</label>
+    <input type="date" class="form-control" name="StartDate" value="@Model.StartDate" /> *@
+
+    <label>Instructor Id</label>
+    <input class="form-control" name="InstructorId" value="@Model.InstructorId" />
+
+
+    <button class="btn btn-success mt-3">Save</button>
+
+</form>

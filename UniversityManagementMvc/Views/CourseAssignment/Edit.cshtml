@@ -1,0 +1,23 @@
+﻿@model UniversityManagementMvc.Models.CourseAssignment
+
+<h2>Update Department</h2>
+
+<form method="post">
+
+
+
+    <label>Course Assignment Id</label>
+    <input class="form-control" type="hidden" name="Id" value="@Model.Id" readonly/>
+
+    <label>CourseId</label>
+    <input class="form-control" name="courseId" value="@Model.courseId" />
+
+
+
+    <label>Instructor Id</label>
+    <input class="form-control" name="instructorId" value="@Model.instructorId" />
+
+
+    <button class="btn btn-success mt-3">Save</button>
+
+</form>

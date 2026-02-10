@@ -1,0 +1,39 @@
+﻿@model List<UniversityManagementMvc.Models.Enrollment>
+
+<h2>Enrollment List</h2>
+
+<a href="/Enrollment/Create" class="btn btn-primary">Add New</a>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Enrollment Id</th>
+            <th>Course Id</th>
+            <th>Grade</th>
+            <th>Student Id</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.enrollmentId</td>
+                <td>@item.CourseId</td>
+                <td>@item.Grade</td>
+                <td>@item.StudentId</td>
+                @* <td>
+                    <a asp-action="Details" class="btn btn-secondary" asp-route-id="@item.enrollmentId">Details</a>
+                    <a class="btn btn-warning" href="/Enrollment/Edit/@item.enrollmentId">Edit</a>
+                    <a class="btn btn-danger" href="/Enrollment/Delete/@item.enrollmentId">Delete</a>
+                </td> *@
+                <td>
+                    <a asp-action="Details" asp-route-id="@item.enrollmentId">Details</a> |
+                    <a asp-action="Edit" asp-route-id="@item.enrollmentId">Edit</a> |
+                    <a asp-action="Delete" asp-route-id="@item.enrollmentId">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

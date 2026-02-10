@@ -1,0 +1,30 @@
+﻿@model UniversityManagementMvc.Models.Enrollment
+
+@{
+    ViewData["Title"] = "Enrollment Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <dl class="row">
+        <dt class="col-sm-2">Enrollment Id</dt>
+        <dd class="col-sm-10">@Model.enrollmentId</dd>
+
+        <dt class="col-sm-2">Course Id</dt>
+        <dd class="col-sm-10">@Model.CourseId</dd>
+
+        <dt class="col-sm-2">Grade</dt>
+        <dd class="col-sm-10">@Model.Grade</dd>
+
+        <dt class="col-sm-2">Student Id</dt>
+        <dd class="col-sm-10">@Model.StudentId</dd>
+
+
+    </dl>
+</div>
+
+<p>
+    <a asp-action="Edit" asp-route-id="@Model.enrollmentId" class="btn btn-secondary">Edit</a>
+    <a asp-action="Index" class="btn btn-link">Back to List</a>
+</p>

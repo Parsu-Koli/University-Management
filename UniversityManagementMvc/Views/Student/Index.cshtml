@@ -1,0 +1,39 @@
+﻿@model List<UniversityManagementMvc.Models.Students>
+
+@{
+    ViewData["Title"] = "Students";
+}
+
+<h2>Students</h2>
+
+<p>
+    <a asp-action="Create" class="btn btn-primary">Create New</a>
+</p>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Enrollment Date</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var s in Model)
+        {
+            <tr>
+                <td>@s.Id</td>
+                <td>@s.FirstName</td>
+                <td>@s.LastName</td>
+                <td>@s.EnrollmentDate.ToString("yyyy-MM-dd")</td>
+                <td>
+                    <a asp-action="Details" asp-route-id="@s.Id">Details</a> |
+                    <a asp-action="Edit" asp-route-id="@s.Id">Edit</a> |
+                    <a asp-action="Delete" asp-route-id="@s.Id">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

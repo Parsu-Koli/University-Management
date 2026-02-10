@@ -1,0 +1,41 @@
+﻿@model List<UniversityManagementMvc.Models.Department>
+
+<h2>Department List</h2>
+
+<a href="/Department/Create" class="btn btn-primary">Add New</a>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Budget</th>
+            <th>Start Date</th>
+            <th>Instructor Id</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.departmentId</td>
+                <td>@item.Name</td>
+                <td>@item.Budget</td>
+                <td>@item.StartDate</td>
+                <td>@item.InstructorId</td>
+                @* <td>
+                    <a class=" btn btn-secondary" href="/Department/Details/@item.departmentId">Details</a>
+                    <a class="btn btn-warning" href="/Department/Edit/@item.departmentId">Edit</a>
+                    <a class="btn btn-danger" href="/Department/Delete/@item.departmentId">Delete</a>
+                </td> *@
+                <td>
+                    <a asp-action="Details" asp-route-id="@item.departmentId">Details</a> |
+                    <a asp-action="Edit" asp-route-id="@item.departmentId">Edit</a> |
+                    <a asp-action="Delete" asp-route-id="@item.departmentId">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

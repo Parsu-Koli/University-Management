@@ -1,0 +1,33 @@
+﻿@model List<UniversityManagementMvc.Models.OfficeAssignment>
+
+<h2>Office Assignment List</h2>
+
+<a href="/OfficeAssignment/Create" class="btn btn-primary">Add New</a>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Instructor ID</th>
+            <th>Instructor Name</th>
+            <th>Location</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.instructorId</td>
+                <td>@item.InstructorName</td>
+                <td>@item.location</td>
+                
+                <td>
+                    <a asp-action="Details" asp-route-id="@item.instructorId">Details</a> |
+                    <a asp-action="Edit" asp-route-id="@item.instructorId">Edit</a> |
+                    <a asp-action="Delete" asp-route-id="@item.instructorId">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

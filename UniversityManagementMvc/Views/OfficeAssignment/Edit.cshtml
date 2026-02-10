@@ -1,0 +1,13 @@
+﻿@model UniversityManagementMvc.Models.OfficeAssignment
+
+<h2>Edit Office Assignment</h2>
+
+<form method="post">
+    <label>Instructor ID</label>
+    <input class="form-control" name="instructorId" value="@Model.instructorId" readonly />
+
+    <label>Location</label>
+    <input class="form-control" name="location" value="@Model.location" />
+
+    <button class="btn btn-success mt-3">Update</button>
+</form>

@@ -1,0 +1,32 @@
+﻿@model UniversityManagementMvc.Models.Course
+
+@{
+    ViewData["Title"] = "Department Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <dl class="row">
+        <dt class="col-sm-2">Course Id</dt>
+        <dd class="col-sm-10">@Model.courseId</dd>
+
+        <dt class="col-sm-2">Department Title</dt>
+        <dd class="col-sm-10">@Model.Title</dd>
+
+        <dt class="col-sm-2">Credits</dt>
+        <dd class="col-sm-10">@Model.Credits</dd>
+
+        <dt class="col-sm-2">Department Id</dt>
+        <dd class="col-sm-10">@Model.DepartmentId</dd>
+
+     
+
+
+    </dl>
+</div>
+
+<p>
+    <a asp-action="Edit" asp-route-id="@Model.courseId" class="btn btn-secondary">Edit</a>
+    <a asp-action="Index" class="btn btn-link">Back to List</a>
+</p>

@@ -1,0 +1,23 @@
+﻿@model UniversityManagementMvc.Models.Enrollment
+
+<h2>Update Enrollment</h2>
+
+<form method="post">
+
+   
+    <input type="hidden" asp-for="enrollmentId" />
+
+
+    <label>CourseId</label>
+    <input class="form-control" name="CourseId" value="@Model.CourseId" />
+
+    <label>Grade</label>
+    <input class="form-control" name="Grade" value="@Model.Grade"/>
+
+    <label>Student Id</label>
+    <input class="form-control" name="StudentId" value="@Model.StudentId"/>
+
+
+
+    <button class="btn btn-success mt-3">Update</button>
+</form>
